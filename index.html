@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="verification">
+        <h2>ID Verification</h2>
+        <input type="text" id="idNumber" placeholder="Enter ID Number">
+        <button onclick="verifyId()">Verify</button>
+    </div>
+
+    <div id="voting" style="display:none;">
+        <h2>Vote for a Candidate</h2>
+        <div class="candidate">
+            <img src="male_avatar.png" alt="Candidate 1 Avatar">
+            <label><input type="radio" name="candidate" value="Candidate 1"> Candidate 1</label>
+        </div>
+        <div class="candidate">
+            <img src="female_avatar.png" alt="Candidate 2 Avatar">
+            <label><input type="radio" name="candidate" value="Candidate 2"> Candidate 2</label>
+        </div>
+        <div class="candidate">
+            <img src="male_avatar.png" alt="Candidate 3 Avatar">
+            <label><input type="radio" name="candidate" value="Candidate 3"> Candidate 3</label>
+        </div>
+        <button onclick="submitVote()">Submit Vote</button>
+    </div>
+
+    <div id="certificate" style="display:none;">
+        <h2>Certificate</h2>
+        <p id="congratsMessage">Congratulations for voting!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
